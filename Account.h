@@ -16,7 +16,9 @@ class Account
         string get_accountId();
         double get_balance();
         string get_date();
-        void get_customerAcc();
+        Customer get_customerAcc();
+        void view_account();
+        void view_customer();
 
     private:
         string acc_id;

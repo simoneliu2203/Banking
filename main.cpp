@@ -28,9 +28,14 @@ int main()
     cout << "-------------------------------------------" << endl;
 
     Checking checking1("A1234", 125.75, "2017-11-26", c1);
-    cout << "Account id: " << checking1.get_accountId()<< endl;
-    cout << "Account balance: " << checking1.get_balance()<< endl;
-    cout << "Account opening date: " << checking1.get_date()<< endl;
-    checking1.get_customerAcc();
+    Checking checking2("A4899", 85.55, "2017-11-26", c1);
+
+    checking1.view_account();
+    checking1.view_customer();
+
+    c1.addAccount(&checking1);
+    c1.addAccount(&checking2);
+    c1.count_acc();
+
     return 0;
 }

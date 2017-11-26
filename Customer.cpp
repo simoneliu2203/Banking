@@ -12,6 +12,7 @@ Customer::Customer()
     address = "";
     phone = "";
     email = "";
+    acc_list;
 }
 
 Customer::Customer(string c_id, string c_name)
@@ -52,6 +53,17 @@ void Customer::viewInfo()
     cout << "Customer address: " << address << endl;
     cout << "Customer phone: " << phone << endl;
     cout << "Customer email: " << email << endl;
+}
+
+void Customer::addAccount(Account* acc)
+{
+    acc_list.push_back(acc);
+}
+
+int Customer::count_acc()
+{
+    cout << "Number of accounts: " << acc_list.size() << endl;
+    return acc_list.size();
 }
 
 void Customer::set_address(string addr)

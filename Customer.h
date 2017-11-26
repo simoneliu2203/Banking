@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include <string>
-
+#include <list>
 
 using namespace std;
+
+class Account;
 
 class Customer
 {
@@ -17,7 +19,9 @@ class Customer
         string get_address();
         string get_phone();
         string get_email();
+        int count_acc();
         void viewInfo();
+        void addAccount(Account* acc);
         void set_address(string addr);
         void set_phone(string fone);
         void set_email(string e_mail);
@@ -27,6 +31,11 @@ class Customer
         string address;
         string phone;
         string email;
+        Account* acc;
+        list<Account*> acc_list;
+        int num_acc;
+
+
 };
 
 #endif // CUSTOMER_H

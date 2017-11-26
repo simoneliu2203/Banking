@@ -33,7 +33,19 @@ string Account::get_date()
     return date;
 }
 
-void Account::get_customerAcc()
+Customer Account::get_customerAcc()
+{
+    return cust;
+}
+
+void Account::view_account()
+{
+    cout << "Account id: " << acc_id << endl;
+    cout << "Account balance: " << balance << endl;
+    cout << "Customer date: " << date << endl;
+}
+
+void Account::view_customer()
 {
     cust.viewInfo();
 }
