@@ -1,7 +1,7 @@
-#include "Customer.h"
 #include <iostream>
 #include <string>
 
+#include "Customer.h"
 
 using namespace std;
 
@@ -14,10 +14,10 @@ Customer::Customer()
     email = "";
 }
 
-Customer::Customer(string _id, string _name)
+Customer::Customer(string c_id, string c_name)
 {
-    id = _id;
-    name = _name;
+    id = c_id;
+    name = c_name;
 }
 
 string Customer::get_id()
@@ -43,6 +43,15 @@ string Customer::get_phone()
 string Customer::get_email()
 {
     return email;
+}
+
+void Customer::viewInfo()
+{
+    cout << "Customer id: " << id << endl;
+    cout << "Customer name: " << name << endl;
+    cout << "Customer address: " << address << endl;
+    cout << "Customer phone: " << phone << endl;
+    cout << "Customer email: " << email << endl;
 }
 
 void Customer::set_address(string addr)

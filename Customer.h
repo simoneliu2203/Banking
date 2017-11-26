@@ -17,6 +17,7 @@ class Customer
         string get_address();
         string get_phone();
         string get_email();
+        void viewInfo();
         void set_address(string addr);
         void set_phone(string fone);
         void set_email(string e_mail);
