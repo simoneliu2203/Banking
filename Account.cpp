@@ -50,3 +50,9 @@ void Account::view_customer()
     cust.viewInfo();
 }
 
+void Account::deposit(double amt, string des)
+{
+    balance = balance + amt;
+    description = des;
+}
+

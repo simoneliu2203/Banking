@@ -19,12 +19,14 @@ class Account
         Customer get_customerAcc();
         void view_account();
         void view_customer();
+        void deposit(double amt, string des);
 
-    private:
+    protected:
         string acc_id;
         double balance;
         string date;
         Customer cust;
+        string description;
 };
 
 #endif // ACCOUNT_H

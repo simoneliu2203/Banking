@@ -25,6 +25,8 @@ class Customer
         void set_address(string addr);
         void set_phone(string fone);
         void set_email(string e_mail);
+        list<Account*> acc_list;
+        void allAccounts();
     private:
         string id;
         string name;
@@ -32,8 +34,9 @@ class Customer
         string phone;
         string email;
         Account* acc;
-        list<Account*> acc_list;
         int num_acc;
+    protected:
+
 
 
 };

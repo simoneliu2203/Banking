@@ -12,6 +12,7 @@ class Checking:public Account
     public:
         Checking();
         Checking(string a_id, double a_bal, string a_date, Customer a_cus);
+        void montly_charge();
 
     protected:
 

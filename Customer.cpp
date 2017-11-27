@@ -12,7 +12,6 @@ Customer::Customer()
     address = "";
     phone = "";
     email = "";
-    acc_list;
 }
 
 Customer::Customer(string c_id, string c_name)
@@ -60,9 +59,10 @@ void Customer::addAccount(Account* acc)
     acc_list.push_back(acc);
 }
 
+
 int Customer::count_acc()
 {
-    cout << "Number of accounts: " << acc_list.size() << endl;
+    cout << "Number accounts of customer "<< id << ": " << acc_list.size() << endl;
     return acc_list.size();
 }
 
@@ -79,4 +79,15 @@ void Customer::set_email(string e_mail)
 void Customer::set_phone(string fone)
 {
     phone = fone;
+}
+
+void Customer::allAccounts()
+{
+    int maximum = count_acc();
+    cout << maximum <<endl;
+    /*for (int i = 0; i != maximum; i++)
+    {
+    cout << acc_list[i]<<endl;
+    }*/
+
 }
